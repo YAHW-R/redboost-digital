@@ -1,0 +1,11 @@
+:root {
+    --primary-color-orange: #F46A1F; /* creative orange */
+    --primary-color-blue: #2B2FA5; /* deep electric blue */
+    --secundary-color-pink: #F53396; /* bold pink */
+    --secundary-color-purple: #6D4DFF; /* visionary purple */
+    --background-color: #E6E8EB; /* soft Light Gray */
+    --text-color: #2c3e50; /* Dark Gray */
+    --border-color: #bdc3c7; /* Silver */
+    --font-family: 'montserrat', sans-serif; /* Montserrat font */
+    --font-size: 1.2rem;
+}
