@@ -55,6 +55,15 @@ nav {
 .nav-link > a {
     color: var(--primary-color-blue);
     text-decoration: none;
+    transition: all 0.3s ease;
+
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.nav-link > a:active {
+    background-color: var(--primary-color-blue);
+    color: white;
 }
 
 header {
@@ -80,6 +89,14 @@ header {
 
 .animate-header {
     transform: translateX(0);
+}
+
+header > img {
+    transition: all 0.3s ease-in-out;
+}
+
+header > img:active {
+    transform: scale(1.2);
 }
 
 header p {
@@ -290,7 +307,10 @@ header p {
 
     header > img:hover {
         transform: scale(1.2) rotate(15deg);
-        
+    }
+
+    header > img:active {
+        transform: scale(1);
     }
 
     header p {
