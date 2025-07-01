@@ -16,24 +16,40 @@ const ctm = document.querySelector('.CTM');
 const cm = document.querySelector('.CM');
 const wdd = document.querySelector('.WDD');
 
-const observerRight = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.classList.contains('.CTM') || entry.classList.contains('.WDD')) {
-            entry.target.classList.add('animate-services-rigth');
-        }
-    });
-}, {threshold: 0.5});
+const ssmPosition = ssm.offsetTop - window.innerHeight + 200;
+const ctmPosition = ctm.offsetTop - window.innerHeight + 200;
+const cmPosition = cm.offsetTop - window.innerHeight + 200;
+const wddPosition = wdd.offsetTop - window.innerHeight + 200;
 
 
-const observerLeft = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.classList.contains('.SSM') ||  entry.classList.contains('.CM') ) {
-            entry.target.classList.add('animate-services-left');
-        }
-    });
-}, {threshold: 0.5});
+function verificarScrollSmm() {
+    if (window.scrollY > ssmPosition) {
+        elemento.classList.add('animate-services-rigth');
+        window.removeEventListener('scroll', verificarScrollSmm);
+    }
+}
+window.addEventListener('scroll', verificarScrollSmm);
 
-observerRight.observe(ssm);
-observerLeft.observe(ctm);
-observerRight.observe(cm);
-observerLeft.observe(wdd);
+function verificarScrollCtm() {
+    if (window.scrollY > ctmPosition) {
+        ctm.classList.add('animate-services-left');
+        window.removeEventListener('scroll', verificarScrollCtm);
+    }
+}
+window.addEventListener('scroll', verificarScrollCtm);
+
+function verificarScrollCm() {
+    if (window.scrollY > cmPosition) {
+        cm.classList.add('animate-services-right');
+        window.removeEventListener('scroll', verificarScrollCm);
+    }
+}
+window.addEventListener('scroll', verificarScrollCm);
+
+function verificarScrollWdd() {
+    if (window.scrollY > wddPosition) {
+        wdd.classList.add('animate-services-left');
+        window.removeEventListener('scroll', verificarScrollWdd);
+    }
+}
+window.addEventListener('scroll', verificarScrollWdd);
