@@ -393,3 +393,40 @@ header p {
     }
     
 }
+
+@media screen and (max-width: 768px) {
+    .SSM, .CM {
+        transform: translateX(-110%);
+    }
+
+    .CTM, .WDD {
+        transform: translateX(110%);
+    }
+
+    .animate-services-right {
+        animation: slideIn-right 0.5s forwards;
+    }
+    .animate-services-left {
+        animation: slideIn-left 0.5s forwards;
+    }
+
+
+    @keyframes slideIn-right {
+        0% {
+            transform: translateX(-110%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideIn-left {
+        0% {
+            transform: translateX(110%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+        
+    }
+}
