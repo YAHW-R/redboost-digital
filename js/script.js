@@ -25,7 +25,7 @@ const wddPosition = wdd.offsetTop - window.innerHeight + 200;
 function verificarScrollSsm() {
     if (window.scrollY > ssmPosition) {
         ssm.classList.add('animate-services-rigth');
-        window.removeEventListener('scroll', verificarScrollSmm);
+        window.removeEventListener('scroll', verificarScrollSsm);
     }
 }
 window.addEventListener('scroll', verificarScrollSsm);
