@@ -22,13 +22,13 @@ const cmPosition = cm.offsetTop - window.innerHeight + 200;
 const wddPosition = wdd.offsetTop - window.innerHeight + 200;
 
 
-function verificarScrollSmm() {
+function verificarScrollSsm() {
     if (window.scrollY > ssmPosition) {
         elemento.classList.add('animate-services-rigth');
         window.removeEventListener('scroll', verificarScrollSmm);
     }
 }
-window.addEventListener('scroll', verificarScrollSmm);
+window.addEventListener('scroll', verificarScrollSsm);
 
 function verificarScrollCtm() {
     if (window.scrollY > ctmPosition) {
