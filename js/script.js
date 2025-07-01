@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //animate services elements on scroll
 
-const ssm = document.querySelector('.ssm');
-const ctm = document.querySelector('.ctm');
-const cm = document.querySelector('.cm');
-const wdd = document.querySelector('.wdd');
+const ssm = document.querySelector('.SSM');
+const ctm = document.querySelector('.CTM');
+const cm = document.querySelector('.CM');
+const wdd = document.querySelector('.WDD');
 
 const observerRight = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.classList.contains('.ctm') || entry.classList.contains('.wdd')) {
+        if (entry.classList.contains('.CTM') || entry.classList.contains('.WDD')) {
             entry.target.classList.add('animate-services-rigth');
         }
     });
@@ -27,7 +27,7 @@ const observerRight = new IntersectionObserver((entries) => {
 
 const observerLeft = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.classList.contains('.ssm') ||  entry.classList.contains('.cm') ) {
+        if (entry.classList.contains('.SSM') ||  entry.classList.contains('.CM') ) {
             entry.target.classList.add('animate-services-left');
         }
     });
