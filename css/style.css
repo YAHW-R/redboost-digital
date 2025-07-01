@@ -396,11 +396,11 @@ header p {
 
 @media screen and (max-width: 768px) {
     .SSM, .CM {
-        transform: translateX(-110%);
+        transform: translateX(-120%);
     }
 
     .CTM, .WDD {
-        transform: translateX(110%);
+        transform: translateX(120%);
     }
 
     .animate-services-right {
@@ -413,7 +413,7 @@ header p {
 
     @keyframes slideIn-right {
         0% {
-            transform: translateX(-110%);
+            transform: translateX(-120%);
         }
         100% {
             transform: translateX(0);
@@ -422,7 +422,7 @@ header p {
 
     @keyframes slideIn-left {
         0% {
-            transform: translateX(110%);
+            transform: translateX(120%);
         }
         100% {
             transform: translateX(0);
