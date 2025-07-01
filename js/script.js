@@ -18,7 +18,7 @@ const wdd = document.querySelector('.wdd');
 
 const observerRight = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.classList.contains('.ctm') || entry.classList.contains('.wdd')) {
             entry.target.classList.add('animate-services-rigth');
         }
     });
@@ -27,13 +27,13 @@ const observerRight = new IntersectionObserver((entries) => {
 
 const observerLeft = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.classList.contains('.ssm') ||  entry.classList.contains('.cm') ) {
             entry.target.classList.add('animate-services-left');
         }
     });
 }, {threshold: 0.5});
 
-observerRight.observe(ssm);
-observerLeft.observe(ctm);
-observerRight.observe(cm);
-observerLeft.observe(wdd);
+observerRight(ssm);
+observerLeft(ctm);
+observerRight(cm);
+observerLeft(wdd);
