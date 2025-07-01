@@ -409,10 +409,10 @@ header p {
     }
 
     .animate-services-right {
-        animation: slideIn-right 0.5s forwards;
+        animation: slideIn-right 1s forwards;
     }
     .animate-services-left {
-        animation: slideIn-left 0.5s forwards;
+        animation: slideIn-left 1s forwards;
     }
 
 
