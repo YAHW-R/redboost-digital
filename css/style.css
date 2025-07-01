@@ -395,6 +395,11 @@ header p {
 }
 
 @media screen and (max-width: 768px) {
+
+    #services {
+        overflow-x: hidden;
+    }
+
     .SSM, .CM {
         transform: translateX(-120%);
     }
