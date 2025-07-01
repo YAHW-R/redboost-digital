@@ -33,7 +33,7 @@ const observerLeft = new IntersectionObserver((entries) => {
     });
 }, {threshold: 0.5});
 
-observerRight(ssm);
-observerLeft(ctm);
-observerRight(cm);
-observerLeft(wdd);
+observerRight.observe(ssm);
+observerLeft.observe(ctm);
+observerRight.observe(cm);
+observerLeft.observe(wdd);
